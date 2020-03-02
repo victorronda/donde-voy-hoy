@@ -154,6 +154,12 @@
     z-index: 10;
 }
 
+.icono-edificio {
+    font-size:36px; 
+    margin-top:15px; 
+    color: steelblue;
+}
+
 .row1-container {
     margin-left: 20px;
 }
@@ -169,6 +175,13 @@
     border-radius: 50%;
     background-color: lightblue;
     z-index: 10;
+}
+
+.icono-avion {
+    font-size:42px; 
+    margin-top:15px; 
+    transform: translate(-2px); 
+    color: steelblue;
 }
 
 .texto-row2 {
@@ -232,11 +245,15 @@
     
 }
 .logo-fb {
-   transform: translate(-15px,0);
+   transform: translate(-17px,0);
 }
 
 .FB {
     margin-left: 16px;
+}
+
+.letras-FB {
+    transform: translate(11px);
 }
 
 .mi-copyright {
@@ -262,7 +279,7 @@
     margin: 0 94px;
 }
 
-.circulo-icono-reg {
+.circulo-inicio-sesion {
     width: 55px;
     height: 55px;
     transform: translate(52px);
@@ -275,6 +292,9 @@
 
 .icono-sonriente {
     transform: translate(0px,10px);
+    font-size:36px; 
+    margin-bottom: 15px; 
+    color: steelblue;
 }
 
 .labels-reg-log {
@@ -302,6 +322,19 @@
     margin-bottom: 10px;
     padding: 2px;
     color:white
+}
+
+.icono-risa {
+    font-size:18px; 
+    padding-top:3px; 
+    margin-bottom: 15px; 
+    color: steelblue;
+}
+
+.icono-inicio-sesion {
+    font-size:34px; 
+    transform: translate(0,-18px); 
+    color: steelblue;
 }
 
 .botton-ini-ses {
@@ -354,13 +387,13 @@
 
 /* RESOLUCIÓN LAPTOP NORMAL */
 
-/*
 
-@media (max-width: 1024px) {
+
+@media (min-width: 401px) {
 
     .mi-navbar{
         width: 100%;
-        height: 105px;
+        height: 75px;
         background-color: steelblue;
         z-index: 20;
         border-bottom: 5px solid lightblue;
@@ -391,8 +424,10 @@
     
     .links-header {
         list-style: none;
-        text-align: end;
-        padding: 7px;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
     
     .etiq-links {
@@ -416,6 +451,7 @@
     
     .info-general {
         background-color: lightblue;
+        height: 800px;
     }
     .recuadro-grande-info {
         border:35px solid lightblue;
@@ -428,6 +464,7 @@
         border:40px solid steelblue;
         border-start-end-radius: 111px;
         border-radius: 35px;
+        height: 435px;
     }
     
     .filas-info {
@@ -456,19 +493,26 @@
     }
     
     .texto-row1 {
-        margin-top:10px;
+        margin-top:120px;
     }
     
     .circulo-icono {
-        max-width: 70px;
-        max-height: 70px;
+        max-width: 200px;
+        max-height: 200px;
         justify-items: center;
-        margin-top: 12px;
-        transform: translate(-20px,-5px);
+        margin-top: 110px;
+        transform: translate(100px,-5px);
         padding: 0px -30px;
         border-radius: 50%;
         background-color: lightblue;
         z-index: 10;
+    }
+
+    .icono-edificio {
+        font-size:120px; 
+        margin-top:15px; 
+        color: steelblue;
+        transform: translate(24px,23px);
     }
     
     .row1-container {
@@ -476,68 +520,90 @@
     }
     
     .circulo-icono2 {
-        max-width: 70px;
-        max-height: 70px;
+        max-width: 200px;
+        max-height: 200px;
         justify-items: center;
         margin-top: 12px;
         margin-right: 30px;
-        transform: translate(18px,-5px);
+        transform: translate(0px,-5px);
         padding: 0px -40px;
         border-radius: 50%;
         background-color: lightblue;
         z-index: 10;
     }
+
+    .icono-avion {
+        font-size:100px; 
+        margin-top:15px; 
+        transform: translate(30px,30px); 
+        color: steelblue;
+    }
     
     .texto-row2 {
         margin-left: 20px;
+        transform: translate(0,-30px);
+    }
+
+    .fondo-seccion-busqueda {
+        background-image: url(img/img-fondo-busqueda.jpg);
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        height: 600px;
     }
     
     .seccion-busqueda {
-        height: 135px; 
+        height: 340px; 
         background-color: lightsteelblue;
         border: 15px solid white;
         border-radius: 25px;
+        width: 40%;
+        margin: 0 30%;
+        transform: translate(0,130px);
     
     }
     
     .titulo-busqueda {
-        font-size: 25px;
+        font-size: 45px;
         text-emphasis: center;
         position: relative;
         justify-self: center;
         text-align: center;
-        margin: 12px auto;
+        margin: 40px auto;
         color: lightcoral;
     
     }
     
     #donde-voy-hoy {
-        width: 190px;
+        width: 100%;
+        height: 2em;
         border: 1px solid lightcoral;
         border-radius: 20px;
-        transform: translate(-10px,0);
+        transform: translate(0px,0);
     }
     
     .botton-buscar {
-        width: 90px;
+        height: 3em;
+        width: 80%;
         background-color: lightcoral;
-        transform: translate(10px,0);
+        transform: translate(33px,0);
         border: 1px solid lightcoral;
         border-radius: 15px;
         text-align: center;
         padding: 2px;
-        color:white
+        color:white;
+        margin-top: 40px;
     }
     
     .mi-footer {
-        height: 125px;
+        height: 225px;
         width: 100%;
         background-color: #7A5E83;
     }
     
     .social-media {
         flex-direction: column;
-        transform: translate(0,22px);
+        transform: translate(70px,22px);
         justify-content: left;
         flex-wrap: wrap;
     }
@@ -545,44 +611,98 @@
     
     .social-links {
         color: white;
-        font-size: 14px;
-        
+        font-size: 20px;
+        padding: 10px;
+        transform: translate(-65px,0);
+    }
+
+    .iconos-social {
+        color:white;
+        font-size: 35px;
+        transform: translate(0,8px);
+
     }
     .logo-fb {
-       transform: translate(-15px,0);
+       transform: translate(-75px,7px);
     }
     
     .FB {
-        margin-left: 16px;
+        margin-left: 75px;
     }
     
     .mi-copyright {
-        transform: translate(40px,20px);
+        transform: translate(500px,70px);
         color: white;
         max-width: 300px;
-        font-size:14px;
+        font-size:20px;
+    }
+
+    .tit-ini-ses {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
     }
     
-    .widget-sky {
-        padding:25px;
+    .titulo_ciudad_h2 {
+        font-size: 28px;
+        margin: 35px 25px;
     }
+    
+    .parraf_ciudad_p {
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-bottom: 40px;
+    }
+    
+     .imag_ciudad_img {
+        width: 100%;
+        height: 100%;
+        
+
+    }
+
+
+
+    
+    .widget-sky {
+        padding:75px;
+    }
+
+    
+
+    .seccion-registro {
+        height: 650px;
+        width: 100%;
+    }
+
+
+    
      .tit-registro {
-        font-size: 30px;
+        font-size: 34px;
         text-align: center;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
-        padding: 0;                
+        transform: translate(px);                
+    }
+
+    .form-registro {
+        width: 10px;
     }
     
     .centrar-todo-registro {
-        margin: 0 94px;
+        align-items: center;
+        justify-content: center;
+        
+        
+      
     }
     
     .circulo-icono-reg {
-        width: 55px;
-        height: 55px;
-        transform: translate(52px);
+        width: 155px;
+        height: 155px;
+        transform: translate(225px);
         text-align: center;
         border-radius: 50%;
         background-color: lightblue;
@@ -591,40 +711,88 @@
     }
     
     .icono-sonriente {
-        transform: translate(0px,10px);
+        transform: translate(0px,28px);
+        font-size:100px; 
+        margin-bottom: 15px; 
+        color: steelblue;
+
     }
     
     .labels-reg-log {
         text-align: center;
         width: 100%;
         margin-top: 10px;
+        font-size: 20px;
+        transform: translate(-px);
     }
     
     .inputs-reg-log {
-        width: 200px;
+        width: 500px;
         border: 1px solid lightcoral;
         border-radius: 25px;
-        transform: translate(-22px,0);
+        transform: translate(55px,0);
     }
     
     
     .botton-registrar {
-        width: 120px;
+        width: 500px;
         background-color: lightcoral;
-        transform: translate(20px,0);
+        transform: translate(55px,0);
         border: 1px solid lightcoral;
         border-radius: 15px;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 50px;
         margin-bottom: 10px;
-        padding: 2px;
+        align-items: center;
+        padding: 7px;
         color:white
     }
-    
+
+    .form-inicio-sesion{
+        height: 560px;
+
+    }
+
+
+    .icono-risa {
+        font-size: 50px; 
+        padding-top; 
+        margin-bottom: 15px; 
+        color: steelblue;
+        transform: translate(10px,0px); 
+    }
+
+
+    .icono-inicio-sesion {
+        font-size: 80px; 
+        transform: translate(-10px,50px); 
+        color: steelblue;
+    }
+
+    .circulo-inicio-sesion {
+        width: 155px;
+        height: 155px;
+        transform: translate(532px);
+        text-align: center;
+        border-radius: 50%;
+        background-color: lightblue;
+        float: left;
+        
+    }
+
+    .label-ini-ses {
+        transform: translate(-5px);
+
+    }
+
+    .input-ini-ses {
+        transform: translate(362px);
+    }
+
     .botton-ini-ses {
-        width: 160px;
+        width: 500px;
         background-color: lightcoral;
-        transform: translate(px,0);
+        transform: translate(362px,25px);
         border: 1px solid lightcoral;
         border-radius: 20px;
         text-align: center;
@@ -635,12 +803,11 @@
     }
     
     .tit-ini-ses {
-        font-size: 20px;
+        font-size: 34px;
         width: 100%;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
 
 }
-*/

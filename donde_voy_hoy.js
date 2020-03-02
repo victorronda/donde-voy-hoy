@@ -17,7 +17,8 @@ let donde_voy_busqueda = document.getElementById('titulo-ciudad')
 
     fetch(`https://es.wikipedia.org/api/rest_v1/page/summary/${myParam}`)
         .then(response => response.json())
-        .then(titulo => {   
+        .then(titulo => { 
+              
         //TÍTULO CIUDAD     
         let tit_ciudad = titulo.title; 
         let crear_h2 = document.createElement('h2');

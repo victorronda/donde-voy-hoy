@@ -84,4 +84,5 @@ Task definition in order of priority
 
 ### Slides ###
 
+[googleslides] (https://drive.google.com/uc?export=download&id=1pNUK8AiMATG2hmpob0byVkw0SdRX2A1rtqwVaovwyZI)
 URls for the project presentation (slides) Link Slides.com
