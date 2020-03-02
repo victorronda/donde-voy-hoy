@@ -36,19 +36,35 @@ Los datos de los usuarios se obtendrán del formulario de registro y del almacen
 
 
 Página de inicio
+![paginaprincipalmovil] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/iPhone%20X-XS-11%20Pro%20%E2%80%93%20P%C3%A1gina%20principal.jpg)
 
+
+![paginaprincipal1laptop] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/Web%201920%20%E2%80%93%20Pagina%20principal.jpg)
+
+![paginaprincipal2laptop] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/Web%201920%20%E2%80%93%20P%C3%A1gina%20principal%202.jpg)
 
 
 
 Página ¿Dónde vuelo hoy?
+![paginadvhmovil](https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/iPhone%20X-XS-11%20Pro%20%E2%80%93%20P%C3%A1gina%20secci%C3%B3n%20%C2%BFA%20d%C3%B3nde%20voy%20hoy.jpg)
+
+
+![paginadvhlaptop](https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/Web%201920%20%E2%80%93%20P%C3%A1gina%20secci%C3%B3n%20%C2%BFA%20d%C3%B3nde%20voy%20hoy.jpg)
 
 
 
 Formulario de registro
+![paginaregistromovil] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/iPhone%20X-XS-11%20Pro%20%E2%80%93%20Registro.jpg)
 
+![paginaregistrolaptop] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/Web%201920%20%E2%80%93%20Registro.jpg)
 
 
 Formulario de inicio de sesión
+
+![paginainisesionmovil] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/iPhone%20X-XS-11%20Pro%20%E2%80%93%20Inicio%20sesi%C3%B3n.jpg)
+
+![paginainisesionlaptop] (https://github.com/victorronda/donde-voy-hoy/blob/master/Wireframes/Web%201920%20%E2%80%93%20Inicio%20sesi%C3%B3n.jpg)
+
 
 
 ### States y States Transitions ###???
