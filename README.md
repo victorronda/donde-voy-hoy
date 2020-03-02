@@ -32,9 +32,22 @@ Los datos de los usuarios se obtendrán del formulario de registro y del almacen
 
 ### Wireframes
 
+
+
+
 Página de inicio
+
+
+
+
 Página ¿Dónde vuelo hoy?
+
+
+
 Formulario de registro
+
+
+
 Formulario de inicio de sesión
 
 
@@ -50,7 +63,7 @@ Task definition in order of priority
 
 ### Git ###
 
-URls for the project repo and deploy Link Repo Link Deploy
+[dondevoyhoygithub] (https://github.com/victorronda/donde-voy-hoy "Repositorio ¿Dónde voy hoy?")
 
 
 ### Slides ###

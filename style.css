@@ -336,6 +336,7 @@
 
 /* RESOLUCIÓN LAPTOP NORMAL */
 
+/*
 
 @media (min-width: 1024px) {
 
@@ -343,7 +344,6 @@
         width: 100%;
         height: 105px;
         background-color: steelblue;
-        /*background: linear-gradient(70deg, rgb(13, 155, 238)),rgb(13, 155, 238);*/
         z-index: 20;
         border-bottom: 5px solid lightblue;
     }  
@@ -353,30 +353,19 @@
     }
     
     .logo-header {
-        width: 15%;
-        height: 10%;
-    }
-    
-    .boton-movil {
-        z-index: 1200;
-        background-color: white;
-        width: 40px;
-        height: 40px;
+        width: 10%;
+        height: 1%;
     }
     
     
-    .barritas-movil{
-        width: 100%;
-        height: 100%;
-        font-size: 40px;
-        background-color: blue
-    }
     
+   
     
     .icon-bar{
         z-index: 2000;
         background-color: #14EBDE;
     }
+
     #mi-dropdown {
         z-index: 2000;
         
@@ -395,13 +384,13 @@
     
     
     .carrusel {
-        max-height: 563px;
+        max-height: 840px;
         background-size: cover;
         width: 100%;
     }
     
     .info-general {
-        max-height: 563px;
+        max-height: 840px;
         background-size: cover;
         width: 100%;
     }
@@ -411,16 +400,16 @@
         background-color: lightblue;
     }
     .recuadro-grande-info {
-        border:15px solid lightblue;
+        border:35px solid lightblue;
         background-color: steelblue;
-        border-radius: 25px;
+        border-radius: 55px;
        
     }
     
     .fondo-azul-redondeado {
-        border:20px solid steelblue;
+        border:40px solid steelblue;
         border-start-end-radius: 111px;
-        border-radius: 25px;
+        border-radius: 35px;
     }
     
     .filas-info {
@@ -428,12 +417,17 @@
     }
     
     .filas-info h2 {
-        font-size: 12px;
+        font-size: 38px;
+        margin-left: 130px;
     }
     
     .filas-info p {
-        font-size: 10px;
+        font-size: 28px;
+        margin-left: 130px;
+        width: 300px;
     }
+
+
     
     .icono-info {
         font-size: 120px;
@@ -631,3 +625,4 @@
 
 
 }
+*/
