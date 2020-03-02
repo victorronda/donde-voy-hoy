@@ -324,6 +324,24 @@
     margin-top: 10px;
 }
 
+.titulo_ciudad_h2 {
+    font-size: 28px;
+    margin: 25px 10px;
+}
+
+.parraf_ciudad_p {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+ .imag_ciudad_img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
 }
 
 
@@ -338,7 +356,7 @@
 
 /*
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
 
     .mi-navbar{
         width: 100%;
