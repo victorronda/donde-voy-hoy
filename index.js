@@ -1,4 +1,4 @@
-const urlParams = new URLSearchParams(window.location.search);
+/*const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('donde-voy-hoy');
 console.log(myParam);
 
@@ -17,12 +17,10 @@ let donde_voy_busqueda = document.getElementsByTagName('titulo-ciudad')
         donde_voy_busqueda.appendChild(crear_h2);   
             
         })
-
-
-
-
-
 boton_busqueda.onclick = busqueda
+*/
+
+
 
 let car_lap = document.querySelectorAll('.car-lap');
 let car_mov = document.querySelectorAll('.car-mov');
