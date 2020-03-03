@@ -1,110 +1,71 @@
-"use strict";
+let nombreApellidos = document.getElementById("nom-apell");
+let email = document.getElementById("email");
+let contraseña = document.getElementById("contraseña");
+let repContraseña = document.getElementById("rep-contraseña");
+let iniSesBoton = document.getElementById("botton-ini-ses");
+let form = document.getElementsByClassName("form-regis")[0];
+let botonRegistro = document.getElementsByClassName("botton-registrar")[0];
 
-class Validador {
-    constructor(nombre_apellidos, email, contraseña){
-        this.nombre_apellidos = nombre_apellidos;
-        this.email = email;
-        this.contraseña = contraseña;
-    }
+//let formWrapper = document.getElementsByClassName("form-wrapper")[0];
 
-    comprobarNombreApellidos () {
-        return this.nombre_apellidos ? true : false
-    }
+let usuariosBD = JSON.parse(localStorage.getItem('Usuarios'))
 
-    comprobarEmail () {
-        return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email) ? true : false
-    }
 
-    comprobarContraseña () {
-        if (!this.contraseña){
-            return false
-        } else if (this.contraseña.length < 8){
-            return false
-        } else {
-            return true
-        }
-    }
+botonRegistro.addEventListener("click", function(event){
+    event.preventDefault();
+    borrarErrores();
     
-    crearError (mensaje, localizacion) {
-        let div = document.createElement("div")
-        div.setAttribute("class", "error")
-        div.innerHTML = mensaje
-        form.insertBefore(div, localizacion)
+    if (comprobarUsuarioValido()){
+        alert ("¡Usuario registrado!")
+        crearUsuario(nombreApellidos.value, email.value, contraseña.value)
+        window.location.href = 'index.html'
+    };
+})
+
+function comprobarUsuarioValido () {
+    let validadorRegistro = new RegistroValidador (nombreApellidos.value, email.value, contraseña.value, repContraseña.value);
+    
+    let usuariosBD = JSON.parse(localStorage.getItem("Usuarios"));
+    let usuarioValido = true;
+
+    if(!validadorRegistro.comprobarNombreApellidos ()){
+        validadorRegistro.crearError("Por favor, introduce un nombre válido", nombreApellidos)
+        usuarioValido=false
+    }
+    if(!validadorRegistro.comprobarEmail()){
+        validadorRegistro.crearError("Por favor, introduce una dirección de mail válida", email)
+        usuarioValido=false
+    }
+    if(!validadorRegistro.comprobarContraseña()){
+        validadorRegistro.crearError("Por favor, introduce una contraseña válida", contraseña)
+        usuarioValido=false
+    }
+    if(!validadorRegistro.comprobarContraseñaRepetida()){
+        validadorRegistro.crearError("Las contraseñas no coinciden", repContraseña)
+        usuarioValido=false
+    }
+    if (!validadorRegistro.comprobarEmailEnBD(usuariosBD)){
+        validadorRegistro.crearError("Este mail ya existe", email)
+        usuarioValido=false
     }
 
-    borrarErrores (){
-        let errores = [...document.getElementsByClassName("error")]
-        errores ? errores.forEach(error => error.remove()) : null;
-    }
+    return usuarioValido
+}
+function borrarErrores (){
+    let errores = [...document.getElementsByClassName("error")]
+    errores ? errores.forEach(error => error.remove()) : null;
 }
 
-class RegistroValidador extends Validador {
-    constructor (nombre_apellidos, email, contraseña, repetirContraseña){
-        super(nombre_apellidos, email, contraseña);
-        this.repetirContraseña = repetirContraseña
+function crearUsuario (nombreApellidos, email, contraseña) {
+    const nuevoUsuario = new Usuario (nombreApellidos, email, contraseña)
+
+    if (usuariosBD){
+        usuariosBD.push(nuevoUsuario);
+    } else {
+        usuariosBD = [nuevoUsuario]
     }
-
-    comprobarEmailEnBD (usuariosBD){
-        let usuarioExiste = false;
-
-        if (!usuariosBD){
-            return true;
-        }
-        else{
-            usuariosBD.forEach(user => {
-                if (user.email === this.email){
-                    usuarioExiste=false
-                }
-            })
-        }
-        return usuarioExiste;
-    }
-
-    comprobarContraseñaRepetida() {
-        if(this.contraseña === this.repetirContraseña) {
-            return true;
-        } else {
-            return false;
-        } 
-    }
-}
-
-class InicioSesionValidador extends Validador {
-    constructor (){
-        super();
-    }
-
-    checkEcomprobarEmailEnBDmailInDB (string){
-        if (!usuariosBD){
-            return false
-        }
-        else{
-            usuariosBD.forEach(user => {
-                if (user.email === string){return true}
-            })
-        }
-        return false
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    localStorage.setItem('Usuarios', JSON.stringify(usuariosBD));
+} 
 
 
 /* let nom_apell = document.getElementById('nom-apell');
